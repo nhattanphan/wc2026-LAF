@@ -1,0 +1,165 @@
+.predictions-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.predictions-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.predictions-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.available-section,
+.selected-section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.available-section h3,
+.selected-section h3 {
+  color: #667eea;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.nations-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.nation-btn {
+  padding: 10px 15px;
+  background: #f0f0f0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.nation-btn:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.instruction {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.predictions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  min-height: 300px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.prediction-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #667eea;
+  cursor: move;
+  transition: box-shadow 0.2s;
+}
+
+.prediction-item:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #667eea;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nation-name {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+}
+
+.remove-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.remove-btn:hover {
+  background: #ff5252;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #764ba2;
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .predictions-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .nations-list {
+    grid-template-columns: 1fr;
+  }
+}
